@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "Enhanced CloudFormation template with parameters"
+
+Parameters:
+  BucketNameV1:
+    Type: String
+    Default: demo-sirvan-v1
+    Description: "The name of the first S3 bucket"
+
+  BucketNameV2:
+    Type: String
+    Default: demo-sirvan-v2
+    Description: "The name of the second S3 bucket"
+
+Resources:
+  DemoSirvanV1:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketNameV1
+      VersioningConfiguration:
+        Status: Enabled
+
+  DemoSirvanV2:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketNameV2
+      VersioningConfiguration:
+        Status: Enabled
+
+Outputs:
+  BucketV1Name:
+    Description: "Name of the first bucket"
+    Value: !Ref DemoSirvanV1
+  BucketV2Name:
+    Description: "Name of the second bucket"
+    Value: !Ref DemoSirvanV2

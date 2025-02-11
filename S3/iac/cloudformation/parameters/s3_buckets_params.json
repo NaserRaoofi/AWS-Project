@@ -1,0 +1,11 @@
+[
+    {
+      "ParameterKey": "BucketNameV1",
+      "ParameterValue": "my-custom-bucket-v1"
+    },
+    {
+      "ParameterKey": "BucketNameV2",
+      "ParameterValue": "my-custom-bucket-v2"
+    }
+  ]
+  
