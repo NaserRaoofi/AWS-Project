@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  GabrielUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: "Gabriel"
+      Tags:
+        - Key: "Updated"
+          Value: "True"
+Outputs:
+  GabrielUserArn:
+    Description: "ARN of Gabriel's IAM User"
+    Value: !GetAtt GabrielUser.Arn
+
